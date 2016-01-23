@@ -1,0 +1,67 @@
+
+body {
+    background-image: url("../images/watercolor.jpg");
+}
+
+.store-name-container {
+  width: 50%;
+  height: 60px;
+  margin: auto;
+  margin-top: 15px;
+  border: 2px solid;
+  border-radius: 40px;
+  background: -webkit-linear-gradient(#DB9B7D, #82c982); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#DB9B7D, #82c982); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#DB9B7D, #82c982); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#DB9B7D, #82c982); /* Standard syntax (must be last) */
+}
+
+.main-container {
+  margin-top: 75px;
+  margin-bottom: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.store-name-container p {
+  margin-top: 8px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 28px;
+  color: #404040;
+  text-shadow: 2px 2px #999999;
+  font-family: italic, Georgia, serif;
+}
+
+.menu-container {
+  float: left;
+  margin-top: 3px;
+  width: 250px;
+}
+
+.nav li a:link, .nav a:visited {
+  background-color: #EEE;
+  margin-bottom: 3px;
+  border-radius: 5px;
+}
+
+.nav li a:focus, .nav li a:hover {
+  background-color: #71c171;
+}
+
+.active li a {
+  background-color: #337AB7;
+}
+
+.data-container {
+  border-color: blue;
+  border-radius: 5px;
+  margin-left: 292px;
+  margin-right: 270px;
+}
+
+.welcome {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 40px; 
+}

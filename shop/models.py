@@ -6,9 +6,15 @@ from validators import validate_year
 class Artist(models.Model):
     name = models.CharField(null=False, blank=False, max_length=100)
 
+    def __unicode__(self):
+       return self.name
+
 
 class Genre(models.Model):
     name = models.CharField(null=False, blank=False, max_length=30)
+
+    def __unicode__(self):
+       return self.name
 
 
 class Album(models.Model):
@@ -18,3 +24,6 @@ class Album(models.Model):
     year = models.CharField(null=False, blank=False, max_length=4, validators=[validate_year])
     cover = models.ImageField(upload_to="covers/", default="covers/question_mark.jpg")
     price = models.DecimalField(null=False, blank=False, max_digits=6, decimal_places=2)
+
+    def __unicode__(self):
+       return self.name
