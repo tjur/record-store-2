@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="post">
+      {% csrf_token %}
+      <div class="form-group">
+        <label for="username">Nazwa użytkownika</label>
+        <input type="text" class="form-control" id="username" name="username">
+      </div>
+      <div class="form-group">
+        <label for="first_name">Imię</label>
+        <input type="text" class="form-control" id="first_name" name="first_name">
+      </div>
+      <div class="form-group">
+        <label for="last_name">Nazwisko</label>
+        <input type="text" class="form-control" id="last_name" name="last_name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" name="email">
+      </div>
+      <div class="form-group">
+        <label for="password">Hasło</label>
+        <input type="password" class="form-control" id="password" name="password">
+      </div>
+      <div class="form-group">
+        <label for="password_confirm">Potwierdź hasło</label>
+        <input type="password" class="form-control" id="password_confirm" name="password_confirm">
+      </div>
+      <button type="submit" class="btn btn-success">OK</button>
+    </form>
+
+    <div class="register-errors">
+      {% if errors %}
+          <ul>
+          {% for error in errors %}
+              <li>{{ error }}</li>
+          {% endfor %}
+          </ul>
+      {% endif %}
+    </div>
+{% endblock content %}

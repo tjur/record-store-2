@@ -33,19 +33,29 @@ body {
   font-family: italic, Georgia, serif;
 }
 
+.welcome-user {
+  margin-bottom: 20px;
+  margin-left: 5px;
+  height: 30px;
+}
+
+.welcome-user {
+  font-size: 15px; 
+}
+
 .menu-container {
   float: left;
-  margin-top: 3px;
+  margin-top: -40px;
   width: 250px;
 }
 
-.nav li a:link, .nav a:visited {
+.nav li a:link, .nav a:visited, .nav li a:focus {
   background-color: #EEE;
   margin-bottom: 3px;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 
-.nav li a:focus, .nav li a:hover {
+.nav li a:hover {
   background-color: #71c171;
 }
 
@@ -54,7 +64,6 @@ body {
 }
 
 .data-container {
-  border-color: blue;
   border-radius: 5px;
   margin-left: 292px;
   margin-right: 270px;
@@ -64,4 +73,32 @@ body {
   text-align: center;
   font-weight: bold;
   margin-bottom: 40px; 
+}
+
+.album-covers img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.login-error {
+  margin-top: 20px;
+}
+
+.login-error li {
+  font-weight: bold;
+  color: #e60000;
+}
+
+.register-errors {
+  margin-top: 20px;
+}
+
+.register-errors ul li {
+  font-weight: bold;
+  color: #e60000;
 }

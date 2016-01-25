@@ -15,11 +15,24 @@
 
     <div class="main-container">
       <div class="menu-container">
+        <div class="welcome-user">
+          {% if user.is_authenticated %}
+              <span>Witaj, <span class="bold">{{ user.username }}</span></span>
+          {% endif %}
+        </div>
+
         <ul class="nav nav-pills nav-stacked">
-          <li class="active"><a href="#">Strona główna</a></li>
+          <li class="active"><a href="/">Strona główna</a></li>
           <li><a href="#">Albumy</a></li>
-          <li><a href="#">Menu 2</a></li>
-          <li><a href="#">Kontakt</a></li>
+          {% if user.is_authenticated %}
+              <li><a href="#">Moje konto</a></li>
+              <li><a href="#">Koszyk</a></li>
+              <li><a href="/logout">Wyloguj</a></li>
+          {% else %}
+              <li><a href="/login">Zaloguj się</a></li>
+              <li><a href="/register">Rejestracja</a></li>
+          {% endif %}
+          <li><a href="/contact">Kontakt</a></li>
         </ul>
       </div>
 
