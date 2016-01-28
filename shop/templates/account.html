@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="account">
+      <div class="account-labels">
+        <div class="desc-label">
+          <span class="label label-default">Nazwa użytkownika</span> <span class="indent-20">{{ user.username }}</span>
+        </div>
+        <div class="desc-label">
+          <span class="label label-default">Imię</span> <span class="indent-20">{{ user.first_name }}</span>
+        </div>
+        <div class="desc-label">
+          <span class="label label-default">Nazwisko</span> <span class="indent-20">{{ user.last_name }}</span>
+        </div>
+        <div class="desc-label">
+          <span class="label label-default">Email</span> <span class="indent-20">{{ user.email }}</span>
+        </div>
+      </div>
+    </div>
+    
+{% endblock content %}

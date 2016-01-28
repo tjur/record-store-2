@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="album-desc">
+      <div class="album-cover">
+        <img width="250" height="250" alt="{{ album.name }}" src="{{ album.cover }}" />
+      </div>
+      <div class="description">
+        <div class="desc-label">
+          <span class="label label-default">Album</span> <span class="indent-20">{{ album.name }}</span>
+        </div>
+        <div class="desc-label">
+          <span class="label label-default">Artysta</span> <span class="indent-20">{{ album.artist.name }}</span>
+        </div>
+        <div class="desc-label">
+          <span class="label label-default">Gatunek</span> <span class="indent-20">{{ album.genre }}</span>
+        </div>
+        <div class="desc-label">
+          <span class="label label-default">Rok wydania</span> <span class="indent-20">{{ album.year }}</span>
+        </div>
+        <div class="desc-label">
+          <span class="label label-default">Cena</span> <span class="indent-20">{{ album.price }} zł</span>
+        </div>
+        <div class="desc-label">
+          <span class="label label-default">Opis</span> <span class="indent-20">{{ album.desc }}</span>
+        </div>
+        {% if album.quantity == 0 %}
+          <div class="quantity-0">
+            <span class="label label-danger">Brak towaru</span>
+          </div>
+        {% else %}
+            <div>
+              <form method="post" action="add">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-info">Do koszyka</button>
+                <select class="form-control" name="basket_quantity">
+                  {% for i in range %}
+                      <option>{{ i }}</option>
+                  {% endfor %}
+                </select>
+              </form>
+            </div>
+        {% endif %}
+      </div>
+    </div>
+
+{% endblock content %}

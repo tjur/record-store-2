@@ -37,6 +37,7 @@ body {
   margin-bottom: 20px;
   margin-left: 5px;
   height: 30px;
+  font-family: "Lucida Console", Times, serif;
 }
 
 .welcome-user {
@@ -75,6 +76,14 @@ body {
   margin-bottom: 40px; 
 }
 
+.message {
+  float: right;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 40px;
+  font-family: "Lucida Console", Times, serif;
+}
+
 .album-covers img {
   margin-left: auto;
   margin-right: auto;
@@ -83,6 +92,10 @@ body {
 
 .bold {
   font-weight: bold;
+}
+
+.center {
+  text-align: center;
 }
 
 .login-error {
@@ -101,4 +114,104 @@ body {
 .register-errors ul li {
   font-weight: bold;
   color: #e60000;
+}
+
+.table-striped {
+  border-collapse: separate;
+  border-spacing: 0 20px;
+}
+
+.table-striped > tbody > tr {
+  font-family: "Lucida Console", Times, serif;
+  font-size: 15px;
+}
+
+.table-striped tbody tr a {
+  font-size: 12px;
+}
+
+.table-striped > tbody > tr:nth-of-type(even) {
+  background-color: #f9f9f9;
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #ccff99;
+}
+
+.album-desc {
+  overflow:hidden;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+}
+
+.album-desc .description {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 17px;
+}
+
+.album-desc .description .desc-label {
+  margin-top: 25px;
+}
+
+.quantity-0 {
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.album-desc .description button {
+  float: left;
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.album-desc .description select {
+  float: left;
+  margin-top: 25px;
+  margin-bottom: 15px;
+  margin-left: 30px;
+  width: 100px;
+}
+
+.album-desc .album-cover {
+  float: right;
+  margin: 20px;
+}
+
+.indent-20 {
+  margin-left: 20px;
+  font-family: "Lucida Console", Times, serif;
+}
+
+.make-order-amount {
+  float: right;
+}
+
+.make-order {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.amount {
+  font-weight: bold;
+  font-family: "Lucida Console", Times, serif;
+}
+
+.account {
+  overflow:hidden;
+  background-color: #F9F9F9;
+  border-radius: 5px;
+}
+
+.account .account-labels {
+  float: left;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  font-size: 17px;
+}
+
+.account .account-labels .desc-label {
+  margin-top: 25px;
 }

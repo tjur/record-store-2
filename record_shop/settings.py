@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_tables2',
+    'devserver',
     'shop'
 )
 
@@ -64,12 +66,17 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.core.context_processors.request',
             ],
         },
     },
 ]
 
 WSGI_APPLICATION = 'record_shop.wsgi.application'
+
+LOGIN_URL = '/login/'
+
+LOGOUT_URL = '/logout/'
 
 
 # Database

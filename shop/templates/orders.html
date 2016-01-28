@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+    
+    {% if not orders %}
+        <h3 class="bold center">Nie złożono jeszcze żadnego zamówienia</h3>
+    {% else %}
+    <div class="basket">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Data złożenia</th>
+            <th>Kwota</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for order in orders %}
+              <tr>
+                <td>#{{ order.id }}</td>
+                <td>{{ order.start_date }}</td>
+                <td>{{ order.amount }} zł</td>
+                <td>{{ order.get_status_display }}</td>
+              </tr>
+          {% endfor %}
+        </tbody>  
+      </table>
+    </div>
+    {% endif %}
+
+{% endblock content %}

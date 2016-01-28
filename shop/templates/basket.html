@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    {% if not basket_items_and_prices %}
+        <h3 class="bold center">Koszyk jest pusty</h3>
+    {% else %}
+    <div class="basket">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Album</th>
+            <th>Liczba</th>
+            <th>Cena</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for x in basket_items_and_prices %}
+              <tr>
+                <td><img width="50" height="50" src="{{ x.basket_item.album.cover }}"></td>
+                <td>{{ x.basket_item.album.name }}</td>
+                <td>{{ x.basket_item.quantity }}</td>
+                <td>{{ x.price }} zł</td>
+                <th><a href="delete_basket_item/{{ x.basket_item.id }}" class="btn btn-danger">Usuń</a></th>
+              </tr>
+          {% endfor %}
+        </tbody>  
+      </table>
+      <div class="make-order-amount">
+        <div class="amount">
+          <span>Razem {{ amount }} zł</span>
+        </div>
+        <div class="make-order">
+          <a href="create_order" class="btn btn-info">Złóż zamówienie</a>
+        </div>
+      </div>
+    </div>
+    {% endif %}
+    
+{% endblock content %}
